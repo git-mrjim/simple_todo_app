@@ -6,7 +6,7 @@
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                         Sign in to your account
                     </h1>
-                    <form class="space-y-4 md:space-y-6" action="#">
+                    <form class="space-y-4 md:space-y-6" action="<?= $authSignup ? 'controllers/signup.php' : 'controllers/login.php' ?>" method="POST">
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
                             <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2.5" placeholder="name@company.com" required="">
@@ -23,7 +23,7 @@
 
                         ?>
                         
-                        <button type="submit" class="w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
+                        <button type="submit" class="w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"><?= $authSignup ? 'Signup' : 'Login' ?></button>
                         <p class="text-sm font-light text-gray-500 text-gray-400">
                             <?= $authSignup ? 'Do you have an account?' : 'Don’t have an account yet?' ?> <a href="<?= $authSignup ? '/simple_todo_app/' : '/simple_todo_app/signup' ?>" class="font-medium text-indigo-600 hover:underline"><?= $authSignup ? 'Login' : 'Sign up' ?></a>
                         </p>

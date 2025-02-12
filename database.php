@@ -11,11 +11,11 @@ class Database {
         $this->pdo = new PDO($this->dsn, $username, $password);
     }
 
-    public function query($query) {
+    public function query($query, $value=null) {
         // Connect to MySql Database
         
         $statement = $this->pdo->prepare($query);
-        $statement->execute();
+        $statement->execute($value);
 
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
