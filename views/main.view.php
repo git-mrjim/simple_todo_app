@@ -15,9 +15,10 @@
     ?>
 </div>
 
-<form action="add.php" method="POST" class="fixed bottom-4 right-4">
+<form action="/simple_todo_app/add" method="POST" class="fixed bottom-4 right-4">
     <input type="submit" value="Add" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2" />
     <input type="text" name="id" value="<?= $id ?>" class="hidden" />
+    <input type="text" name="isAdding" value="0" class="hidden" />
 </form>
 
 <?php require 'partials/footer.view.php' ?>
