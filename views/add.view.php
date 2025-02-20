@@ -1,7 +1,9 @@
 <?php require 'partials/header.view.php' ?>
 
 <form action="#" method="POST" class="mt-10 max-w-sm mx-auto">
+    <input type="text" name="IsLogin" value="0" class="hidden" />
     <input type="text" name="id" value="<?= $id ?>" class="hidden" />
+    <input type="email" name="email" value="<?= $email ?>" class="hidden" />
     <input type="text" name="isAdding" value="1" class="hidden" />
     <div class="mb-5">
         <label for="title" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>

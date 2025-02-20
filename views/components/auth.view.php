@@ -7,6 +7,7 @@
                         Sign in to your account
                     </h1>
                     <form class="space-y-4 md:space-y-6" action="<?= $authSignup ? 'controllers/signup.php' : 'controllers/login.php' ?>" method="POST">
+                        <input type="text" name="IsLogin" value="1" class="hidden" />
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
                             <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2.5" placeholder="name@company.com" required="">
